@@ -16,28 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bco-WP-uEK">
-                                <rect key="frame" x="10" y="812" width="394" height="40"/>
-                                <color key="backgroundColor" red="0.28654116390000001" green="0.63304978609999996" blue="0.95690113310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="nSf-B2-kjz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Sync Contacts">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="clickSyncData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFT-XN-ajK"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Machine Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysm-aR-qjX">
+                                <rect key="frame" x="141" y="464.5" width="132.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.28654116390000001" green="0.63304978609999996" blue="0.95690113310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bco-WP-uEK" secondAttribute="trailing" constant="10" id="Eic-hC-f8U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bco-WP-uEK" secondAttribute="bottom" constant="10" id="eYe-lu-xkf"/>
-                            <constraint firstItem="Bco-WP-uEK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kfx-wq-v4h"/>
+                            <constraint firstItem="Ysm-aR-qjX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pai-eY-6xS"/>
+                            <constraint firstItem="Ysm-aR-qjX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="xRy-Np-mYO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Am-1i-lCS"/>
@@ -72,8 +62,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHo-6Z-oB2">
                                                     <rect key="frame" x="0.0" y="0.0" width="394" height="147"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="42q-pA-oe2">
-                                                            <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="42q-pA-oe2">
+                                                            <rect key="frame" x="10" y="11.5" width="100" height="97"/>
+                                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="HKu-kP-aCh"/>
                                                                 <constraint firstAttribute="height" constant="100" id="ok2-Mb-ikw"/>
@@ -429,6 +420,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -32,25 +32,22 @@ class EmployeeListViewController: UIViewController {
 extension EmployeeListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(employeeDataModel.count)
-//        return employeeDataModel.count
+       
         return filterData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TblEmployeeListCell", for: indexPath) as! TblEmployeeListCell
-    
-//        let imageURL = URL(string: employeeDataModel[indexPath.row].profileImage) ?? nil
-//        cell.imgProfile.kf.setImage(with: imageURL)
-//        cell.lblName.text = employeeDataModel[indexPath.row].name
-//        cell.lblCompanyName.text = employeeDataModel[indexPath.row].company
-//        return cell
         
         let imageURL = URL(string: filterData[indexPath.row].profileImage) ?? nil
         cell.imgProfile.kf.setImage(with: imageURL)
         cell.lblName.text = filterData[indexPath.row].name
-        cell.lblCompanyName.text = filterData[indexPath.row].company
+        
+        var companyName = filterData[indexPath.row].company
+        companyName = companyName.components(separatedBy: ",")[0]
+
+        cell.lblCompanyName.text = companyName
         return cell
     }
     

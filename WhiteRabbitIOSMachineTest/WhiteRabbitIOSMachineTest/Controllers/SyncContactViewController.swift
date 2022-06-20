@@ -38,12 +38,6 @@ class SyncContactViewController: UIViewController {
             print(err)
         }
     }
-    
-    @IBAction func clickSyncData(_ sender: UIButton) {
-        
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EmployeeListViewController") as! EmployeeListViewController
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 }
 
 //MARK: - Api call
@@ -61,6 +55,9 @@ extension SyncContactViewController {
                 for empData in employeeData[0] {
                     enterEmployeeData(employeeData: empData)
                 }
+                
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EmployeeListViewController") as! EmployeeListViewController
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
